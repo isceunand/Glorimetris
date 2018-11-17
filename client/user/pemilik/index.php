@@ -3,8 +3,6 @@ session_start();
 if($_SESSION['status_role']!="pemilik")
 {
  header("Location:../../../index.php");
-}else{
-  echo "salah session kampret";
 }
 ?>
 
