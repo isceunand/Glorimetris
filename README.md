@@ -28,4 +28,7 @@
 - Peserta harus menempatkan link aplikasi dibagian bawah panduan ini (ditempat yang telah disediakan)
 - Pastikan link aplikasi yang dikirim peserta dapat berfungsi dengan baik
 
-LINK APLIKASI => "Tulis Link Disini"
+LINK APLIKASI => "glorimetris.herokuapp.com"
+role: pemilik-> un:pemilik pass:123456
+      pencari-> un:pencari pass:123456
+      admin-> un:admin pass:123456
