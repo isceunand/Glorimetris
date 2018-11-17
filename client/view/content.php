@@ -1,6 +1,11 @@
+<?php
+
+include '../../../server/proses/get_tanah.php';
+
+?>
+
 
 <!-- Script JS Menu-->
-
 
 
 
@@ -96,6 +101,7 @@
     
     
   <script>
+  var json_tanah = <?php echo json_encode($hasil) ?>;
   
    var mymap = L.map('mapid',{drawControl: true}).setView([-0.874904, 100.367544], 13);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -104,27 +110,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiYXh2ZXI3IiwiYSI6ImNqOXNxdHF4bjBzb2czM2p6cmVzZzBwcXgifQ.l38Ez-rF1XCin25iUIynoQ'
 }).addTo(mymap);
-
-// var drawnItems = new L.FeatureGroup();
-//      mymap.addLayer(drawnItems);
-//      var drawControl = new L.Control.Draw({
-//          edit: {
-//              featureGroup: drawnItems
-//          }
-//      });
-//      mymap.addControl(drawControl);
-function markerprov(html)
-{
-  
-  test=html.split(',');
-  console.log(test[0]);
-  console.log(test[1]);
-  var marker = L.marker([test[1],test[0]]).addTo(mymap);
-  // alert("Masooook Pak Ekoo!!");
-  // mymap.panTo(new L.LatLng(test[1], test[0]));
-
-  mymap.setView(new L.LatLng(test[1], test[0]), 12);
-}
+L.geoJSON(json_tanah).addTo(mymap);
 
 
 

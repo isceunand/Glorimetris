@@ -14,6 +14,8 @@
 
   <script src="../../../server/js/main.js"></script>
 
+
+
 </head>
 
 <body>
@@ -23,8 +25,9 @@ include "include.php";
 include "../../../server/connect.php";
 include "../../view/header.php";
 include "../../view/sidebar.php";
-include "../../view/content.php";
 include "../../view/footer.php";
+include '../../../server/connect.php';
+include "../../view/content.php";
 
 ?>
 
