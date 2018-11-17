@@ -134,6 +134,9 @@ function addMarker(e){
    newMarker.bindPopup("Marker Anda");
    console.log(curPos.lng);
    console.log(curPos.lat);
+   console.log(curPos.lng+" "+curPos.lat);
+   var latlong=curPos.lng+" "+curPos.lat;
+   radius(latlong);
    
 }
 
@@ -179,7 +182,18 @@ function range()
 
 // Pakai Ajax untuk Mendapatkan Geom dalam range tersebut
 
+function radius(rad)
+{
 
+          $.ajax({
+            type: 'GET',
+            url: '../../../server/proses/radius.php?radius='+rad,
+            success: function (html) {
+              alert(html);
+          }
+        });
+  
+}
 
   </script>
 
