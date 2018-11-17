@@ -195,7 +195,7 @@
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                 osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}),
-                map = new L.Map('map', {center: new L.LatLng(-6.282250, 106.801443), zoom: 13}),
+                map = new L.Map('map', {center: new L.LatLng(-0.921080, 100.453537), zoom: 13}),
                 drawnItems = L.featureGroup().addTo(map);
             L.control.layers({
                 'osm': osm.addTo(map),
@@ -263,7 +263,7 @@
 
             function passing_php() {
                 var sertipikat = document.getElementById("id").value;
-                window.location.href = "../../magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
+                window.location.href = "../../../server/proses/input_tanah.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
 
             }
 
