@@ -27,46 +27,7 @@
            <div class="col-sm-5">
            <div class='row'>
             <div class='col sm-4'>
-            <select class='form-control'>
-           <option>
-           Salayan
-           </option>
-           <option>
-           Piliang
-           </option>
-           <option>
-           Chaniago
-           </option>
-           <option>
-           Jambak
-           </option>
-           <option>
-           Simabua
-           </option>
-           <option>
-           Melayu Deli
-           </option>
-           <option>
-           Sikumbang
-           </option>
-           <option>
-           Koto
-           </option>
-           <option>
-           Salayan
-           </option>
-           <option>
-           Guci
-           </option>
-           <option>
-           Tanjuang
-           </option>
-           <option>
-           Sikumbang Sariak
-           </option>
            
-           </select>
-
            
             </div>
            </div>
