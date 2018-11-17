@@ -19,7 +19,7 @@ include '../../../server/proses/get_tanah.php';
     <li class="breadcrumb-item">
       <a href="#">Andaland</a>
     </li>
-    <li class="breadcrumb-item active">Admin</li>
+    <li class="breadcrumb-item active">Selamat datang</li>
   </ol>
 
   <div class="menu">

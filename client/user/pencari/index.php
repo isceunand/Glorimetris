@@ -1,12 +1,12 @@
 <?php
 session_start();
-if($_SESSION['status_role']!="pemilik")
+if($_SESSION['status_role']!="admin")
 {
  header("Location:../../../index.php");
-}else{
-  echo "salah session kampret";
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@ if($_SESSION['status_role']!="pemilik")
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pemilik</title>
+  <title>Pencari</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
     crossorigin="" />
@@ -23,11 +23,6 @@ if($_SESSION['status_role']!="pemilik")
     crossorigin=""></script>
 
   <script src="../../../server/js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
 
 </head>
 
@@ -38,19 +33,10 @@ include "include.php";
 include "../../../server/connect.php";
 include "../../view/header.php";
 include "../../view/sidebar.php";
-include "test2.php";
+include "../../view/content.php";
 include "../../view/footer.php";
 
 ?>
-
-
-
-<script>
-
-
-
-
-</script>
 
   
 

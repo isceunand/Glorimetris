@@ -1,3 +1,11 @@
+<?php
+session_start();
+if($_SESSION['status_role']!="admin")
+{
+ header("Location:../loginpage.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
