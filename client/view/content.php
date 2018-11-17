@@ -110,6 +110,42 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiYXh2ZXI3IiwiYSI6ImNqOXNxdHF4bjBzb2czM2p6cmVzZzBwcXgifQ.l38Ez-rF1XCin25iUIynoQ'
 }).addTo(mymap);
+
+var newMarker;
+var marker;
+
+
+function mapClicked(e) {
+    mymap.off('click', mapClicked);
+    mymap.removeLayer(marker)
+
+    marker = new L.Marker(e.latlng, { draggable: true });
+    marker.bindPopup("<strong>" + e.latlng + "</strong>").addTo(mymap);
+
+    marker.on('dragend', markerDrag);
+}
+
+function addMarker(e){
+  
+    // Add marker to map at click location; add popup window
+   var newMarker = new L.marker(e.latlng).addTo(mymap);
+   var curPos = newMarker.getLatLng();
+  //  alert(curPos.lng + " : " + curPos.lat);
+   newMarker.bindPopup("Marker Anda");
+   console.log(curPos.lng);
+   console.log(curPos.lat);
+   
+}
+
+
+function rangeDulu()
+{
+  alert("Pilih Range Dahulu");
+}
+
+
+
+
 L.geoJSON(json_tanah).addTo(mymap);
 
 
@@ -130,6 +166,18 @@ for(var i = 0; i < length; i++){
   +"<b>Contact:</b>"+json_tanah.features[i].properties.contact+"<br/>"
   );
 }
+
+
+function range()
+{
+  var range=document.getElementById('range');
+  alert("Pilih Posisi Di Map");
+  mymap.on('click', addMarker);
+  console.log(range.value);
+}
+
+
+// Pakai Ajax untuk Mendapatkan Geom dalam range tersebut
 
 
 
