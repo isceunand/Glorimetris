@@ -18,6 +18,8 @@
 		'nama_lengkap' => $isinya['nama_lengkap'],
 		'alamat' => $isinya['alamat'],
 		'contact' => $isinya['contact'],
+		'harga' => $isinya['harga'],
+		'gambar' => $isinya['gambar'],
 		
 		)
 	);

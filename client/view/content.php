@@ -113,6 +113,25 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 L.geoJSON(json_tanah).addTo(mymap);
 
 
+console.log(json_tanah.features.length);
+var length= json_tanah.features.length;
+var polygon;
+
+for(var i = 0; i < length; i++){
+  polygon=L.geoJSON(json_tanah.features[i].geometry).addTo(mymap);
+  polygon.bindPopup("<h4><b>Informasi Tanah</b></h4>"+
+  
+  "<b>No sertifikat:</b>"+json_tanah.features[i].properties.no_sertifikat+"<br/>"
+  +"<b>Harga:</b>"+json_tanah.features[i].properties.harga+"<br/>"
+  +"<b>No sertifikat:</b>"+json_tanah.features[i].properties.gambar+"<br/>"
+  +"<b>Alamat:</b>"+json_tanah.features[i].properties.alamat+"<br/>"
+  +"<h4><b>Info Pemilik</b></h4>"
+  +"<b>Nama Pemilik:</b>"+json_tanah.features[i].properties.nama_lengkap+"<br/>"
+  +"<b>Contact:</b>"+json_tanah.features[i].properties.contact+"<br/>"
+  );
+}
+
+
 
   </script>
 
