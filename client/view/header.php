@@ -71,7 +71,25 @@
             <a class="dropdown-item" href="#">Settings</a>
             <a class="dropdown-item" href="#">Activity Log</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+              <?php
+            if ($_SESSION['username'] = true) {
+                ?>
+                <form action="" method="post" action="header.php">
+
+                    <button class="dropdown-item" href="" name="logout" onclick="destroy()">Logout</button>
+                </form>
+                <?php
+            }else {
+                ?>
+                <a class="dropdown-item" href="../loginpage.php">Login</a>
+                <?php
+            }
+              ?>
+
+
+
+
+
           </div>
         </li>
       </ul>
@@ -90,26 +108,17 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 
 
   </body>
+
+  <script>
+      function destroy() {
+          window.location.href="../../server/logout.php";
+          console.log('hallo');
+      }
+  </script>
 
 </html>
